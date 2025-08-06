@@ -9,26 +9,18 @@
     img, video { max-width: 100%; }
 
 
-    .accordion {
+  .accordion {
+  all: unset;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0 0.2em 0;
   cursor: pointer;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  width: 100%;
-  text-align: left;
-  margin-bottom: 0.5em;
 }
 
 .accordion-content {
   display: none;
-  padding: 10px;
-  background-color: #ffffff;
-  border-left: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
     
@@ -118,22 +110,23 @@
     <img src="project1.jpg" alt="Project 1 image">
   </div>
 
-  <div class="project quick test">
-  <button class="accordion">Frameless Pivots (Carbon House, 2023)</button>
+  <div class="project">
+  <h2 class="accordion">Frameless Pivots (Carbon House, 2023)</h2>
   <div class="accordion-content">
     <img src="Printed Hinges.png" alt="" width="300">
-    <p>This investigation explores the design of a set of elegant, lightweight carbon hinges...</p>
+    <p>
+      This investigation explores the design of a set of elegant, lightweight carbon hinges...
+    </p>
     <p>Assamblage: Guerin, Gandia, Goulthorpe</p>
   </div>
 </div>
 <script>
-  const acc = document.querySelectorAll(".accordion");
+  const headers = document.querySelectorAll(".accordion");
 
-  acc.forEach(button => {
-    button.addEventListener("click", function () {
+  headers.forEach(header => {
+    header.addEventListener("click", function () {
       const content = this.nextElementSibling;
-      const isOpen = content.style.display === "block";
-      content.style.display = isOpen ? "none" : "block";
+      content.style.display = content.style.display === "block" ? "none" : "block";
     });
   });
 </script>
