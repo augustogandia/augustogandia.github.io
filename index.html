@@ -7,6 +7,31 @@
     body { font-family: Helvetica ; max-width: 600px; margin: 40px auto; }
     .project { margin-bottom: 2em; }
     img, video { max-width: 100%; }
+
+
+    .accordion {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background-color: #ffffff;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1.5em;
+}
+
+    
   </style>
 </head>
   
@@ -92,6 +117,27 @@
     <p>This is my first project. It’s about...</p>
     <img src="project1.jpg" alt="Project 1 image">
   </div>
+
+  <div class="project quick test">
+  <button class="accordion">Frameless Pivots (Carbon House, 2023)</button>
+  <div class="accordion-content">
+    <img src="Printed Hinges.png" alt="" width="300">
+    <p>This investigation explores the design of a set of elegant, lightweight carbon hinges...</p>
+    <p>Assamblage: Guerin, Gandia, Goulthorpe</p>
+  </div>
+</div>
+<script>
+  const acc = document.querySelectorAll(".accordion");
+
+  acc.forEach(button => {
+    button.addEventListener("click", function () {
+      const content = this.nextElementSibling;
+      const isOpen = content.style.display === "block";
+      content.style.display = isOpen ? "none" : "block";
+    });
+  });
+</script>
+
   
 </body>
 </html>
