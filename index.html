@@ -29,6 +29,18 @@
   
 <body>
   <h1>Augusto Gandia - Beyond the Pole </h1>
+    
+  <div class="project">
+      <h2 class="accordion">Frameless Pivots (Carbon House, 2023)</h2>
+          <div class="accordion-content">
+              <img src="Printed Hinges.png" alt="" width="300">
+              <p>
+              This investigation explores the design of a set of elegant, lightweight carbon hinges as part of the prefabricated bespoke system of the Carbon House. As in the Shadow of Ledoux, the integral two-part design evokes a conversation of private and public spaces that emerge from the lightness of fiber-reinforced components, the movements of the machining process, and their disassembly. 
+              The design relates to the site through minimally invasive subtracted perforations that hold them into the wall panel without additional frames and through channels for detail embedding (e.g. gaskets). As such, the integral design maximizes daylight, guarantees air-tightness, and allows for disassembly.
+              </p>
+              <p>Assamblage: Guerin, Gandia, Goulthorpe</p>
+          </div>
+  </div>
 
   <div class="project">
     <h2>Frameless Pivots (Carbon House, 2023)</h2>
@@ -110,27 +122,17 @@
     <img src="project1.jpg" alt="Project 1 image">
   </div>
 
-  <div class="project">
-  <h2 class="accordion">Frameless Pivots (Carbon House, 2023)</h2>
-  <div class="accordion-content">
-    <img src="Printed Hinges.png" alt="" width="300">
-    <p>
-      This investigation explores the design of a set of elegant, lightweight carbon hinges...
-    </p>
-    <p>Assamblage: Guerin, Gandia, Goulthorpe</p>
-  </div>
-</div>
-<script>
-  const headers = document.querySelectorAll(".accordion");
 
+
+  <script>
+  const headers = document.querySelectorAll(".accordion");
   headers.forEach(header => {
     header.addEventListener("click", function () {
       const content = this.nextElementSibling;
       content.style.display = content.style.display === "block" ? "none" : "block";
     });
   });
-</script>
-
+  </script>
   
 </body>
 </html>
